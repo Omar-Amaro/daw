@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('price_history', function (Blueprint $table) {
+        Schema::create('media', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_nft')->unsigned();
             $table->foreign('id_nft')->references('id')->on('nfts');
