@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/contacto',function(){
+    echo"HOLA";
+});
+Route::get('/productos',function(){
+    $color="fA0011";
+    $usuario = "Doroteo Arango";
+    $num =rand(1,100);
+    return view('productos')
+                ->with('colorsototote',$color)
+                ->with('usuario',$usuario)
+                ->with('numero',$num);
+});
